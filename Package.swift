@@ -22,5 +22,12 @@ let package = Package(
             name: "HarmoniaTests",
             dependencies: ["Harmonia"]
         ),
+        .target(
+            name: "HarmoniaTypes"
+        ),
+        .testTarget(
+            name: "HarmoniaTypesTests",
+            dependencies: ["HarmoniaTypes"]
+        ),
     ]
 )
