@@ -8,5 +8,5 @@
 import Foundation
 
 public struct AutocompleteInteractionCallbackData: Codable {
-//    public var choices: [ApplicationCommandOptionChoice]
+    public var choices: [ApplicationCommandOptionChoice]
 }

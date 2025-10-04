@@ -47,7 +47,7 @@ public struct ApplicationCommandInteractionDataOption: Codable {
     }
     
     public var name: String
-//    public var type: ApplicationCommandOptionType
+    public var type: ApplicationCommandOptionType
     public var value: Value?
     public var options: [ApplicationCommandInteractionDataOption]?
     public var focused: Bool?
@@ -56,7 +56,7 @@ public struct ApplicationCommandInteractionDataOption: Codable {
 public struct ApplicationCommandData: Codable {
     public var id: Snowflake
     public var name: String
-//    public var type: ApplicationCommandType
+    public var type: ApplicationCommandType
     public var data: ResolvedData?
     public var options: [ApplicationCommandInteractionDataOption]?
     public var guild_id: Snowflake

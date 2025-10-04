@@ -61,7 +61,7 @@ public protocol ApplicationCommandOptionBase: Codable {
 
 public enum ApplicationCommandOption: Codable {
     public struct SubCommand: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .SUB_COMMAND
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -70,7 +70,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct SubCommandGroup: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .SUB_COMMAND_GROUP
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -79,7 +79,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct StringOption: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .STRING
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -92,7 +92,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Integer: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .INTEGER
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -105,7 +105,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Boolean: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .BOOLEAN
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -114,7 +114,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct User: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .USER
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -123,7 +123,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Channel: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .CHANNEL
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -133,7 +133,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Role: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .ROLE
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -142,7 +142,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Mentionable: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .MENTIONALBE
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -151,7 +151,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Number: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .NUMBER
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String
@@ -164,7 +164,7 @@ public enum ApplicationCommandOption: Codable {
     }
 
     public struct Attachment: ApplicationCommandOptionBase {
-        public var type: ApplicationCommandOptionType
+        public var type: ApplicationCommandOptionType = .ATTACHMENT
         public var name: String
         public var name_localizations: Nullable<[Locales : String]?>
         public var description: String

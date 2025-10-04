@@ -9,7 +9,7 @@ import Foundation
 
 public struct MessageComponentData: Codable {
     public var custom_id: String
-//    public var component_type: MessageComponentType
+    public var component_type: ComponentType
     public var values: [String]?
     public var resolved: ResolvedData?
 }

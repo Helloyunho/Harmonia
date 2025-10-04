@@ -13,7 +13,7 @@ public struct MessageInteractionCallbackData: Codable {
 //    public var embeds: [Embed]?
 //    public var allowed_mentions: AllowedMentions?
 //    public var flags: MessageFlags?
-//    public var components: [Component]?
+    public var components: [Component]?
 //    public var attachments: [PartialAttachment]?
 //    public var poll: Poll?
 }
