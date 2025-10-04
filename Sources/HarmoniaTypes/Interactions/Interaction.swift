@@ -51,7 +51,7 @@ public struct Interaction: Codable {
     public var locale: Locales?
     public var guild_locale: Locales?
 //    public var entitlements: [Entitlement]
-//    public var authorizing_integration_owners: [ApplicationIntegrationType: Snowflake]
+    public var authorizing_integration_owners: [ApplicationIntegrationType: Snowflake]
     public var context: InteractionContextType?
     public var attachment_size_limit: Int
     
@@ -95,6 +95,7 @@ public struct Interaction: Codable {
         self.app_permissions = try container.decode(String.self, forKey: .app_permissions)
         self.locale = try container.decodeIfPresent(Locales.self, forKey: .locale)
         self.guild_locale = try container.decodeIfPresent(Locales.self, forKey: .guild_locale)
+        self.authorizing_integration_owners = try container.decode([ApplicationIntegrationType: Snowflake].self, forKey: .authorizing_integration_owners)
         self.context = try container.decodeIfPresent(InteractionContextType.self, forKey: .context)
         self.attachment_size_limit = try container.decode(Int.self, forKey: .attachment_size_limit)
     }

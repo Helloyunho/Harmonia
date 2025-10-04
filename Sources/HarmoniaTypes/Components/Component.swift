@@ -434,9 +434,9 @@ public struct FileComponent: ComponentBase {
     public var file: UnfuledMediaItem
     public var spoiler: Bool?
     /// This field is ignored and provided by the API as part of the response
-    public var name: String?
+    public let name: String?
     /// This field is ignored and provided by the API as part of the response
-    public var size: Int?
+    public let size: Int?
     
     init(type: ComponentType, id: Int? = nil, file: UnfuledMediaItem, spoiler: Bool? = nil) {
         self.type = type

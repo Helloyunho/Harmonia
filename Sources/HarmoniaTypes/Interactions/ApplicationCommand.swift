@@ -24,7 +24,7 @@ public protocol ApplicationCommandBase: Codable {
     var dm_permission: Bool? { get set }
     var default_permission: Nullable<Bool?> { get set }
     var nsfw: Bool? { get set }
-//    var integration_types: [ApplicationIntegrationType]? { get set }
+    var integration_types: [ApplicationIntegrationType]? { get set }
     var contexts: Nullable<[InteractionContextType]?> { get set }
     var version: Snowflake { get set }
 }
@@ -43,6 +43,7 @@ public enum ApplicationCommand: Codable {
         public var dm_permission: Bool?
         public var default_permission: Nullable<Bool?>
         public var nsfw: Bool?
+        public var integration_types: [ApplicationIntegrationType]?
         public var contexts: Nullable<[InteractionContextType]?>
         public var version: Snowflake
     }
@@ -60,6 +61,7 @@ public enum ApplicationCommand: Codable {
         public var dm_permission: Bool?
         public var default_permission: Nullable<Bool?>
         public var nsfw: Bool?
+        public var integration_types: [ApplicationIntegrationType]?
         public var contexts: Nullable<[InteractionContextType]?>
         public var version: Snowflake
         public var options: [ApplicationCommandOption]
@@ -78,6 +80,7 @@ public enum ApplicationCommand: Codable {
         public var dm_permission: Bool?
         public var default_permission: Nullable<Bool?>
         public var nsfw: Bool?
+        public var integration_types: [ApplicationIntegrationType]?
         public var contexts: Nullable<[InteractionContextType]?>
         public var version: Snowflake
         public var handler: EntryPointCommandHandlerType?
